@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curerency Converter App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Currency Converter</h1>
+        <div class="currency-container">
+            <select id="form-currency">
+                <option value="USD" selected>USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="JPY">JPY</option>
+                <option value="AUD">AUD</option>
+                <option value="CAD">CAD</option>
+                <option value="CHF">CHF</option>
+                <option value="CNY">CNY</option>
+                <option value="INR">INR</option>
+                <option value="BRL">BRL</option>
+            </select>
+            <input type="number" id="amount" value="1" min="0" placeholder="Enter amount" />  
+
+        </div>
+        
+         <div class="currency-container">
+            <select id="form-currency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="JPY">JPY</option>
+                <option value="AUD">AUD</option>
+                <option value="CAD">CAD</option>
+                <option value="CHF">CHF</option>
+                <option value="CNY">CNY</option>
+                <option value="INR" selected>INR</option>
+                <option value="BRL">BRL</option>
+            </select>
+            <input type="number" id="amount2" min="0"  disabled />  
+<p class="exchnage"  id = "exchnage-rate"> 1 USD = 138.5802 </p>
+        </div>
+    </div>
+</body>
+</html>
