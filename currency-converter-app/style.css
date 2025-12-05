@@ -25,8 +25,6 @@ h1{
     display: flex;
     flex-direction: row;
 }
-
-
 #form-currency{
     justify-content: space-between;
     flex-direction: column;
