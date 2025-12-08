@@ -27,7 +27,7 @@ header {
 h1{
     color: white;
     line-height: 1;
-    line-spacing: 0.211em;
+    letter-spacing: 0.211em;
     font-size: 3em;
 }
 h1, button {
