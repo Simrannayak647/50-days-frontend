@@ -23,3 +23,8 @@ It fetches **real-time exchange rates** and instantly updates the converted amou
 - `index.html` — Structure  
 - `style.css` — Design  
 - `script.js` — Logic  
+----
+
+## Project Preview
+
+![Currency](./images/Currency.png)

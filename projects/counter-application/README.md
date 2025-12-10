@@ -36,4 +36,4 @@ You can increase or decrease the number and also see how many times each button 
 
 ## Project Preview
 
-![Counter](./images/Counter%20.png)
+![Counter](./images/Counter.png)

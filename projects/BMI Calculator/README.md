@@ -23,6 +23,7 @@ This project helps users quickly calculate their BMI and understand their weight
 - 🎨 CSS  
 - ⚙️ JavaScript  
 
+
 ## Project Preview
 
 ![BMI Calculator](./images/BMI%20Calculator.png)
