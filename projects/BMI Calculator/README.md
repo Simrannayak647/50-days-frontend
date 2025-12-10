@@ -24,8 +24,5 @@ This project helps users quickly calculate their BMI and understand their weight
 - ⚙️ JavaScript  
 
 ---
-
-## 📸 Preview
-
-Add a screenshot here later 👇
-
+## Project Preview
+(./images/BMI Calculator.png)
