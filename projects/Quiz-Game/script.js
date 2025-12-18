@@ -22,50 +22,155 @@ const bar = document.getElementById('progress');
 // Quiz Questions
 const quizQuestions = [
   {
-    question: "Which keyword is used to declare a constant in JavaScript?",
+    question: "What will be the output of: console.log(0.1 + 0.2 === 0.3)?",
     answers: [
-      { text: "var", correct: false },
-      { text: "let", correct: false },
-      { text: "const", correct: true },
-      { text: "static", correct: false },
-    ],
-  },
-  {
-    question: "What will `typeof null` return in JavaScript?",
-    answers: [
-      { text: "null", correct: false },
+      { text: "true", correct: false },
+      { text: "false", correct: true, explanation: "Due to floating point precision, 0.1 + 0.2 = 0.30000000000000004" },
       { text: "undefined", correct: false },
-      { text: "object", correct: true },
-      { text: "string", correct: false },
+      { text: "TypeError", correct: false },
     ],
+    difficulty: "medium"
   },
   {
-    question: "Which method is used to convert JSON string to JavaScript object?",
+    question: "Which statement about 'let' and 'const' is correct?",
     answers: [
-      { text: "JSON.parse()", correct: true },
-      { text: "JSON.stringify()", correct: false },
-      { text: "JSON.object()", correct: false },
-      { text: "parse.JSON()", correct: false },
+      { text: "Both are block-scoped and can be reassigned", correct: false },
+      { text: "'let' is function-scoped, 'const' is block-scoped", correct: false },
+      { text: "'let' can be reassigned, 'const' cannot be reassigned", correct: true },
+      { text: "Both are hoisted to the top of their function scope", correct: false },
     ],
+    difficulty: "easy"
   },
   {
-    question: "Which operator is used to compare both value and type in JavaScript?",
+    question: "What does the following code return: [1, 2, 3].map(n => n * 2).filter(n => n > 3)?",
     answers: [
-      { text: "==", correct: false },
-      { text: "!=", correct: false },
-      { text: "===", correct: true },
-      { text: "=", correct: false },
+      { text: "[2, 4, 6]", correct: false },
+      { text: "[4, 6]", correct: true, explanation: "map returns [2,4,6], filter keeps values > 3" },
+      { text: "[6]", correct: false },
+      { text: "TypeError", correct: false },
     ],
+    difficulty: "easy"
   },
   {
-    question: "Which of the following is NOT a JavaScript data type?",
+    question: "What is the value of 'this' inside an arrow function?",
     answers: [
-      { text: "Number", correct: false },
-      { text: "Boolean", correct: false },
-      { text: "Float", correct: true },
-      { text: "String", correct: false },
+      { text: "The global object (window)", correct: false },
+      { text: "Undefined", correct: false },
+      { text: "The object that contains the arrow function", correct: false },
+      { text: "The lexical context where it was defined", correct: true },
     ],
+    difficulty: "medium"
   },
+  {
+    question: "Which code snippet creates a deep copy of an object?",
+    answers: [
+      { text: "const copy = Object.assign({}, original)", correct: false },
+      { text: "const copy = { ...original }", correct: false },
+      { text: "const copy = JSON.parse(JSON.stringify(original))", correct: true },
+      { text: "const copy = original.slice()", correct: false },
+    ],
+    difficulty: "medium"
+  },
+  {
+    question: "What is the output of: console.log([] == ![])?",
+    answers: [
+      { text: "true", correct: true, explanation: "Due to type coercion: [] == false → '' == false → 0 == 0" },
+      { text: "false", correct: false },
+      { text: "undefined", correct: false },
+      { text: "ReferenceError", correct: false },
+    ],
+    difficulty: "hard"
+  },
+  {
+    question: "Which method is used to handle multiple promises and return when all complete?",
+    answers: [
+      { text: "Promise.race()", correct: false },
+      { text: "Promise.all()", correct: true },
+      { text: "Promise.resolve()", correct: false },
+      { text: "Promise.catch()", correct: false },
+    ],
+    difficulty: "medium"
+  },
+  {
+    question: "What does the 'debounce' function pattern help with?",
+    answers: [
+      { text: "Memory leaks", correct: false },
+      { text: "Rate-limiting function calls (e.g., search input)", correct: true },
+      { text: "Promise chaining", correct: false },
+      { text: "Event bubbling", correct: false },
+    ],
+    difficulty: "medium"
+  },
+  {
+    question: "What is the purpose of the 'use strict' directive?",
+    answers: [
+      { text: "Enables ES6 features", correct: false },
+      { text: "Makes JavaScript run faster", correct: false },
+      { text: "Enforces stricter parsing and error handling", correct: true },
+      { text: "Enables TypeScript features", correct: false },
+    ],
+    difficulty: "easy"
+  },
+  {
+    question: "Which is NOT a falsy value in JavaScript?",
+    answers: [
+      { text: "0", correct: false },
+      { text: "''", correct: false },
+      { text: "null", correct: false },
+      { text: "'0'", correct: true, explanation: "String '0' is truthy" },
+    ],
+    difficulty: "easy"
+  },
+  {
+    question: "What does the following code log: console.log(1 + '2' + 3 - 4)?",
+    answers: [
+      { text: "10", correct: false },
+      { text: "119", correct: true, explanation: "'12' + 3 = '123', then '123' - 4 = 119" },
+      { text: "8", correct: false },
+      { text: "NaN", correct: false },
+    ],
+    difficulty: "hard"
+  },
+  {
+    question: "What is a closure in JavaScript?",
+    answers: [
+      { text: "A function bundled with its lexical environment", correct: true },
+      { text: "A way to close database connections", correct: false },
+      { text: "A method to close modal windows", correct: false },
+      { text: "A technique for memory optimization", correct: false },
+    ],
+    difficulty: "medium"
+  },
+  {
+    question: "Which method adds elements to the beginning of an array?",
+    answers: [
+      { text: "push()", correct: false },
+      { text: "unshift()", correct: true },
+      { text: "prepend()", correct: false },
+      { text: "addFirst()", correct: false },
+    ],
+    difficulty: "easy"
+  },
+  {
+    question: "What is the event loop responsible for?",
+    answers: [
+      { text: "Memory allocation", correct: false },
+      { text: "Executing async callbacks when the call stack is empty", correct: true },
+      { text: "Looping through arrays", correct: false },
+      { text: "Event delegation", correct: false },
+    ],
+    difficulty: "medium"
+  },
+  {
+    question: "What does the 'Symbol' data type represent?",
+    answers: [
+      { text: "A unique and immutable primitive value", correct: true },
+      { text: "A special character in strings", correct: false },
+      { text: "A mathematical symbol", correct: false },
+      { text: "A type of iterator", correct: false },
+    ],
+    difficulty: "hard"
+  }
 ];
 
 // Quiz State
